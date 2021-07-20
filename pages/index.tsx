@@ -44,14 +44,14 @@ export default function Home({ times, date }: IDatetime) {
         </Head>
         <div className="absolute w-full h-full bg-indigo-400 opacity-60 top-0 left-0"></div>
         <div className="absolute z-20 flex flex-col items-center w-full justify-center h-full">
-          <div className="text-white font-bold text-6xl">
+          <div className="text-white font-bold sm:text-2xl md:text-4xl lg:text-6xl">
             Dont Forget to Pray
           </div>
-          <div className="text-white text-2xl mt-2 font-medium">
+          <div className="text-white md:text-xl lg:text-2xl mt-2 font-medium">
             Enter a city of choosing
           </div>
           <form
-            className="mt-8 flex flex-col space-y-2"
+            className="mt-8 flex sm:flex-row md:flex-col sm:items-center md:space-y-2"
             onSubmit={handleSubmit}
           >
             <div>
@@ -64,7 +64,7 @@ export default function Home({ times, date }: IDatetime) {
                 onChange={handleChange}
               />
             </div>
-            <button className="bg-blue-500 hover:bg-blue-400 rounded-lg px-3 py-2 text-white w-full">
+            <button className="bg-blue-500 hover:bg-blue-400 rounded-lg px-3 py-2 text-white w-1/2">
               Submit
             </button>
           </form>

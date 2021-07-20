@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { IDatetime } from "../model/PrayerAPI";
 import Head from "next/head";
-import List from "../component/List";
-import Loading from "../component/Loading";
+import List from "../components/List";
+import Loading from "../components/Loading";
 import { GetStaticProps } from "next";
 
 export default function Home({ times, date }: IDatetime) {

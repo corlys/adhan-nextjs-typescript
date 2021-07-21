@@ -6,7 +6,7 @@ export default async (req: NextApiRequest, res: NextApiResponse<IDatetime>) => {
   try {
     const city = req.query.city;
     const call = await fetch(
-      `https://api.pray.zone/v2/times/today.json?city=${city}`
+      `http://api.pray.zone/v2/times/today.json?city=${city}`
     );
 
     const {

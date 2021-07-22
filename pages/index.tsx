@@ -32,7 +32,6 @@ export default function Home({ times, date }: IDatetime) {
   };
   return (
     <>
-      <Header />
       <div className="w-full relative">
         <Head>
           <title>Adhan-Planet</title>
@@ -68,7 +67,6 @@ export default function Home({ times, date }: IDatetime) {
       </div>
       {isLoading && <Loading />}
       <List times={datetime.times} date={datetime.date} />
-      <Footer />
     </>
   );
 }

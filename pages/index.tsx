@@ -11,22 +11,15 @@ export default function Home({ times, date }: IDatetime) {
     times: times,
     date: date,
   });
-  // console.log(times, date);
-  // console.log(datetime);
   const [isLoading, setIsLoading] = useState(false);
-
-  // useEffect(() => {
-  //   setDatetime({
-  //     times: staticDateTime.times,
-  //     date: staticDateTime.date,
-  //   });
-  // }, []);
-
   const handleSubmit = async (e: React.SyntheticEvent) => {
     e.preventDefault();
     setIsLoading(true);
+    // console.log(process.env.NEXT_PUBLIC_API_URL);
     const response = await fetch(
-      `http://localhost:3000/api/adhan?city=${city}`
+      // `${process.env.NEXT_PUBLIC_API_URL}api/adhan?city=${city}`
+      // `http://localhost:3000/api/adhan?city=${city}`
+      `/api/adhan?city=${city}`
     );
     const prayer = await response.json();
     setDatetime({ ...datetime, ...prayer });

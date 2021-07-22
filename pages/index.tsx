@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { IDatetime } from "../model/PrayerAPI";
 import Head from "next/head";
+import { GetStaticProps } from "next";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import List from "../components/List";
 import Loading from "../components/Loading";
-import { GetStaticProps } from "next";
 
 export default function Home({ times, date }: IDatetime) {
   const [city, setCity] = useState("");
@@ -32,7 +34,7 @@ export default function Home({ times, date }: IDatetime) {
     <>
       <div className="w-full relative">
         <Head>
-          <title>Adhan</title>
+          <title>Adhan-Planet</title>
         </Head>
         <div className="absolute w-full h-full bg-indigo-400 opacity-60 top-0 left-0"></div>
         <div className="absolute z-20 flex flex-col items-center w-full justify-center h-full">
